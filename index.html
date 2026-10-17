@@ -97,7 +97,7 @@
 
             <div class="flex items-center gap-2 sm:gap-3">
 
-                <!-- ✅ NEW CHANGES (Replace with this) -->
+                <!-- ✅ NEW CHANGES (Replaced) -->
 <button id="guideBtn" class="px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-200/60 dark:hover:bg-slate-800/60 transition-colors flex items-center gap-2">
     <i class="fa-solid fa-book-open text-base"></i>
     <span class="hidden sm:inline">User Guide</span>
@@ -254,52 +254,45 @@
         </div>
     </main>
 
-    <!-- GitHub Pages Setup Modal Guide -->
-    <div id="guideModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4 hidden">
-        <div class="glass-panel max-w-xl w-full rounded-3xl p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto border border-slate-200 dark:border-slate-800">
-            <button id="closeGuideBtn" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            
-            <div class="flex items-center gap-3 mb-5">
-                <div class="w-11 h-11 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white flex items-center justify-center shadow-lg">
-                    <i class="fa-brands fa-github text-2xl"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg leading-tight">Host Your Own Site on GitHub Pages</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">100% Free - Works with standard HTML files</p>
-                </div>
+<!-- ✅ AFTER (User Guide Modal Content) -->
+<div id="guideModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-panel max-w-xl w-full rounded-3xl p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto border border-slate-200 dark:border-slate-800">
+        <button id="closeGuideBtn" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        
+        <div class="flex items-center gap-3 mb-5">
+            <div class="w-11 h-11 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-lg">
+                <i class="fa-solid fa-book-open text-xl"></i>
             </div>
-
-            <ol class="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-decimal list-inside">
-                <li class="pl-1">
-                    <strong class="text-slate-900 dark:text-white">Create a GitHub Repository:</strong> Sign into GitHub and create a new public repository named <code class="bg-slate-200/70 dark:bg-slate-800 px-1.5 py-0.5 rounded font-mono text-blue-600 dark:text-blue-400">work-experience-calculator</code>.
-                </li>
-                <li class="pl-1">
-                    <strong class="text-slate-900 dark:text-white">Create index.html:</strong> Click "Add file" &gt; "Create new file". Name it <code class="bg-slate-200/70 dark:bg-slate-800 px-1.5 py-0.5 rounded font-mono text-blue-600 dark:text-blue-400">index.html</code> and paste this entire file's code inside.
-                </li>
-                <li class="pl-1">
-                    <strong class="text-slate-900 dark:text-white">Enable Hosting:</strong>
-                    <ul class="list-disc list-inside pl-4 mt-1 space-y-1 text-slate-500 dark:text-slate-400">
-                        <li>Go to <b>Settings</b> &gt; <b>Pages</b> in your repository.</li>
-                        <li>Under <i>Build and deployment / Branch</i>, select <b>main</b> and click <b>Save</b>.</li>
-                    </ul>
-                </li>
-                <li class="pl-1">
-                    <strong class="text-slate-900 dark:text-white">BOOM! You're Live:</strong> Your site will automatically go live at:
-                    <div class="mt-2 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-emerald-600 dark:text-emerald-400 font-mono text-xs break-all">
-                        https://your-github-username.github.io/work-experience-calculator/
-                    </div>
-                </li>
-            </ol>
-
-            <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-end">
-                <button id="gotItBtn" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition-colors shadow-md">
-                    Got it!
-                </button>
+            <div>
+                <h3 class="font-bold text-lg leading-tight">How to Use ExpCalc Pro</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Step-by-step user guide to calculate exact experience</p>
             </div>
         </div>
+
+        <ol class="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-decimal list-inside">
+            <li class="pl-1">
+                <strong class="text-slate-900 dark:text-white">Add Positions:</strong> Click <b>"+ Add New Position"</b> or load your preloaded work history.
+            </li>
+            <li class="pl-1">
+                <strong class="text-slate-900 dark:text-white">Select Dates:</strong> Choose exact Start and End dates for each role. Check <b>"Present"</b> for active jobs.
+            </li>
+            <li class="pl-1">
+                <strong class="text-slate-900 dark:text-white">Unique Timeline Span:</strong> Automatically merges overlapping parallel jobs so your resume total doesn't double-count concurrent work!
+            </li>
+            <li class="pl-1">
+                <strong class="text-slate-900 dark:text-white">Copy Summary:</strong> Click <b>"Copy"</b> on the summary snippet to paste direct calculation results into your resume or cover letter.
+            </li>
+        </ol>
+
+        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-end">
+            <button id="gotItBtn" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition-colors shadow-md">
+                Got it, let's calculate!
+            </button>
+        </div>
     </div>
+</div>
 
     <!-- Notification Toast -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 glass-panel border border-slate-200 dark:border-slate-700 rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
